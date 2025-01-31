@@ -1,5 +1,5 @@
 # Simple telegram bot assigning a duty role to a worker. 
-After duty role has been assigned, all the messages sent to the bot would be forwarded to a person on duty
+After duty role has been assigned, all the messages sent to the bot would be forwarded to a person on duty.
 You have to @tag bot in any message that should be forwarded.
 
 # how to:
