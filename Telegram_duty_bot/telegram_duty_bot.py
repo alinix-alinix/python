@@ -4,10 +4,10 @@ from aiogram import Bot, Dispatcher, types
 from aiogram.types import Message
 from aiogram.filters import Command
 
-TOKEN = "7081243338:AAEuQE4cx7mXgkKdHKcvSwfGSRTBNdczR9Y"
+TOKEN = "$TELEGRAM_API_TOKEN"
 
 # Список юзернеймов, которые могут стать дежурными
-allowed_users = ["lolwutski", "php_bolno", "palmface1337", "Toh3mi"]
+allowed_users = ["user1", "user2", "user3", "user4"]
 
 # Храним текущего дежурного в памяти
 current_duty = None
