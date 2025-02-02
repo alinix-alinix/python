@@ -4,10 +4,10 @@ from aiogram import Bot, Dispatcher, types
 from aiogram.types import Message
 from aiogram.filters import Command
 
-TOKEN = "$TOKEN"
+TOKEN = "7081243338:AAEuQE4cx7mXgkKdHKcvSwfGSRTBNdczR9Y"
 
 # Список юзернеймов, которые могут стать дежурными
-allowed_users = ["user1", "user2", "user3", "user4"]
+allowed_users = ["lolwutski", "php_bolno", "palmface1337", "Toh3mi"]
 
 # Храним текущего дежурного в памяти
 current_duty = None
@@ -65,11 +65,6 @@ async def forward_to_duty(message: Message):
         bot_info = await bot.get_me()
         bot_username = bot_info.username
 
-    # Проверяем, если дежурный не назначен
-    if current_duty is None:
-        await message.answer("Дежурный не назначен.")
-        return
-
     # Проверяем, упомянул ли кто-то бота
     mentioned = False
     for entity in message.entities:
@@ -80,6 +75,11 @@ async def forward_to_duty(message: Message):
                 break
 
     if mentioned:
+        # Проверяем, если дежурный не назначен
+        if current_duty is None:
+            await message.answer("Дежурный не назначен.")
+            return
+
         # Формируем ссылку на сообщение
         if message.chat.username:
             message_link = f"Ссылка на сообщение: https://t.me/{message.chat.username}/{message.message_id}\nТекст сообщения: {message.text}\n"
